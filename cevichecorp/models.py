@@ -19,7 +19,7 @@ class PerteneceACurso(models.Model):
     rol = models.CharField(max_length=20)
 
 class Coevaluacion(models.Model):
-    nombre=models.Charfield(max_length=60,primary_key=True)
+    nombre=models.CharField(max_length=60,primary_key=True)
     nombre_curso=models.ForeignKey(Curso,related_name='nombre',on_delete=models.CASCADE)
     codigo_curso = models.ForeignKey(Curso,related_name='codigo',on_delete=models.CASCADE)
     seccion_curso = models.ForeignKey(Curso,related_name='seccion',on_delete=models.CASCADE)
@@ -31,7 +31,7 @@ class Coevaluacion(models.Model):
 
 class Equipos(models.Model):
      nombre=models.CharField(max_length=60,primary_key=True)
-     rut_alumno=models.ForeignKey(User,related_name='username')
+     rut_alumno=models.ForeignKey(User,related_name='username', on_delete=models.CASCADE)
      nombre_curso = models.ForeignKey(Curso, related_name='nombre', on_delete=models.CASCADE)
      codigo_curso = models.ForeignKey(Curso, related_name='codigo', on_delete=models.CASCADE)
      seccion_curso = models.ForeignKey(Curso, related_name='seccion', on_delete=models.CASCADE)
