@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = '2018-2-Los-mas-lolein-de-Ingenieria-T4.urls'
+ROOT_URLCONF = 'Proyecto.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = '2018-2-Los-mas-lolein-de-Ingenieria-T4.wsgi.application'
+WSGI_APPLICATION = 'Proyecto.wsgi.application'
 
 
 # Database

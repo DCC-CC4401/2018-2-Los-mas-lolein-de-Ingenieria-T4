@@ -2,47 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47210893-3e88-4bae-8af9-e52fb486fb59" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Aux Grafica/Aux6/curvas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Aux Grafica/Aux6/dragon.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Aux Grafica/Aux6/flecha.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Aux Grafica/Aux6/fuego.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Aux Grafica/Aux6/heroe.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Aux Grafica/Aux6/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Aux Grafica/Aux6/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Aux Grafica/Clase Aux6/curvas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Aux Grafica/Clase Aux6/fuegoBezier.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Aux Grafica/Clase Aux6/fuegoScale.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Aux Grafica/Clase Aux6/mainFuegoBezier.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Aux Grafica/Clase Aux6/mainFuegoScale.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Aux Grafica/Clase Aux6/mainInteracciones.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Aux Grafica/Clase Aux6/mainPersonajes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Aux Grafica/Clase Aux6/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Aux Grafica/Problemas EDP/Tarea1-2018/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Discretas/Tarea1/Tarea1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aux Grafica/M_todos_num_ricos_con_Matlab.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aux Grafica/finite difference methods.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GPU/07f37e92627c78567333620d0dc1b1ff5107.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GPU/2013-TOG-MuscleBasedBipeds.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GPU/6dab3dcd0e69c3271d743c072dce19fd5bfd.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GPU/AndersonPandy.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GPU/EP102125.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GPU/Ijspeert08NeuralNEtworks.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GPU/Optimal_Gait_and_Form_for_Animal_Locomotion.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GPU/Point en c++.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GPU/Tarea1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../GPU/Tarea1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GPU/Tarea1/Face.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../GPU/Tarea1/Face.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GPU/Tarea1/HalfEdge.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../GPU/Tarea1/HalfEdge.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GPU/Tarea1/HalfEdge.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../GPU/Tarea1/HalfEdge.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GPU/Tarea1/Point.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../GPU/Tarea1/Point.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GPU/Tarea1/Vector.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../GPU/Tarea1/Vector.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GPU/Tarea1/Vertex.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../GPU/Tarea1/Vertex.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GPU/Tarea1/Vertex.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../GPU/Tarea1/Vertex.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GPU/Tarea1/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../GPU/Tarea1/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GPU/Vector en c++.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GPU/articulatedSwimmingCreatures.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GPU/paper-quadrupeds2011.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GPU/proyecto-con-codigo.fuente.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/Proyecto/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/Proyecto/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/Proyecto/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/Proyecto/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/manage.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,22 +14,33 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="979312692">
+    <session id="-1108421720">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.30" value="1" />
           <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="57" />
+          <entry key="txt" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="10" />
+          <entry key="Python" value="57" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="2" />
+          <entry key="py" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="2" />
+          <entry key="Python" value="11" />
         </counts>
       </usages-collector>
     </session>
@@ -74,19 +48,52 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../2018-2-Los-mas-lolein-de-Ingenieria-T4/cevichecorp/models.py">
+        <entry file="file://$PROJECT_DIR$/Proyecto/cevichecorp/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+            <state relative-caret-position="242">
+              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Proyecto/Proyecto/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1224">
+              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../2018-2-Los-mas-lolein-de-Ingenieria-T4/cevichecorp/views.py">
+        <entry file="file://$PROJECT_DIR$/Proyecto/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="68">
+              <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Proyecto/Proyecto/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+              <folding>
+                <element signature="e#662#694#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Proyecto/Proyecto/wsgi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="13" column="57" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -94,12 +101,15 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/cevichecorp/models.py" />
+        <option value="$PROJECT_DIR$/Proyecto/Proyecto/settings.py" />
+        <option value="$PROJECT_DIR$/Proyecto/Proyecto/wsgi.py" />
+        <option value="$PROJECT_DIR$/Proyecto/manage.py" />
       </list>
     </option>
   </component>
@@ -114,34 +124,302 @@
     <option name="width" value="1378" />
     <option name="height" value="735" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
-              <item name="Tarea4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2018-2-Los-mas-lolein-de-Ingenieria-T4" type="462c0819:PsiDirectoryNode" />
+              <item name="2018-2-Los-mas-lolein-de-Ingenieria-T4" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
             <path>
-              <item name="Tarea4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2018-2-Los-mas-lolein-de-Ingenieria-T4" type="462c0819:PsiDirectoryNode" />
-              <item name="cevichecorp" type="462c0819:PsiDirectoryNode" />
+              <item name="2018-2-Los-mas-lolein-de-Ingenieria-T4" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Proyecto" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="2018-2-Los-mas-lolein-de-Ingenieria-T4" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Proyecto" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Proyecto" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="2018-2-Los-mas-lolein-de-Ingenieria-T4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2018-2-Los-mas-lolein-de-Ingenieria-T4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2018-2-Los-mas-lolein-de-Ingenieria-T4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2018-2-Los-mas-lolein-de-Ingenieria-T4" type="462c0819:PsiDirectoryNode" />
+              <item name="untitled" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/2018-2-Los-mas-lolein-de-Ingenieria-T4.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/Proyecto/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/Proyecto/__pycache__/__init__.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/Proyecto/__pycache__/__init__.cpython-37.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/Proyecto/__pycache__/settings.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/Proyecto/__pycache__/settings.cpython-37.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/Proyecto/__pycache__/urls.cpython-37.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/Proyecto/settings.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/Proyecto/urls.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/Proyecto/wsgi.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/__pycache__/__init__.cpython-37.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/__pycache__/admin.cpython-37.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/__pycache__/apps.cpython-37.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/__pycache__/models.cpython-37.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/admin.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/apps.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/migrations/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/migrations/__pycache__/__init__.cpython-37.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/models.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/coevaluacion-vista-alumno.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/coevaluacion-vista-docente.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/css/.DS_Store</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/css/bootstrap-grid.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/css/bootstrap-grid.css.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/css/bootstrap-grid.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/css/bootstrap-grid.min.css.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/css/bootstrap-reboot.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/css/bootstrap-reboot.css.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/css/bootstrap-reboot.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/css/bootstrap-reboot.min.css.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/css/bootstrap.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/css/bootstrap.css.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/css/bootstrap.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/css/bootstrap.min.css.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/css/coeval.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/curso-vista-alumno.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/curso-vista-docente.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/home-vista-alumno.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/home-vista-profesor.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/icon/answer-icon.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/icon/cargos-alumno.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/icon/cargos-auxiliar.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/icon/cargos-ayudante.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/icon/cargos-profesor.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/icon/details-icon.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/icon/edit-icon.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/icon/export-icon.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/icon/load-data-icon.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/icon/publish-icon-2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/icon/publish-icon.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/icon/reminder-icon.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/icon/x-icon.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/js/bootstrap.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/js/bootstrap.bundle.js.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/js/bootstrap.bundle.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/js/bootstrap.bundle.min.js.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/js/bootstrap.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/js/bootstrap.js.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/js/bootstrap.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/js/bootstrap.min.js.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/js/coeval.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/login.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/perfil-alumno-vista-docente.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/templates/perfil-vista-dueno.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/tests.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/cevichecorp/views.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/db.sqlite3</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Proyecto/manage.py</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/untitled.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/__pycache__/__init__.cpython-37.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/__pycache__/admin.cpython-37.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/__pycache__/apps.cpython-37.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/__pycache__/models.cpython-37.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/admin.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/apps.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/migrations/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/migrations/__pycache__/__init__.cpython-37.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/models.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/coevaluacion-vista-alumno.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/coevaluacion-vista-docente.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/css/.DS_Store</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/css/bootstrap-grid.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/css/bootstrap-grid.css.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/css/bootstrap-grid.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/css/bootstrap-grid.min.css.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/css/bootstrap-reboot.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/css/bootstrap-reboot.css.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/css/bootstrap-reboot.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/css/bootstrap-reboot.min.css.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/css/bootstrap.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/css/bootstrap.css.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/css/bootstrap.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/css/bootstrap.min.css.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/css/coeval.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/curso-vista-alumno.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/curso-vista-docente.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/home-vista-alumno.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/home-vista-profesor.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/icon/answer-icon.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/icon/cargos-alumno.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/icon/cargos-auxiliar.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/icon/cargos-ayudante.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/icon/cargos-profesor.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/icon/details-icon.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/icon/edit-icon.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/icon/export-icon.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/icon/load-data-icon.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/icon/publish-icon-2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/icon/publish-icon.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/icon/reminder-icon.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/icon/x-icon.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/js/bootstrap.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/js/bootstrap.bundle.js.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/js/bootstrap.bundle.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/js/bootstrap.bundle.min.js.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/js/bootstrap.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/js/bootstrap.js.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/js/bootstrap.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/js/bootstrap.min.js.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/js/coeval.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/login.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/perfil-alumno-vista-docente.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/templates/perfil-vista-dueno.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/tests.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cevichecorp/views.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/db.sqlite3</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/manage.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/untitled/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/untitled/__pycache__/__init__.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/untitled/__pycache__/__init__.cpython-37.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/untitled/__pycache__/settings.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/untitled/__pycache__/settings.cpython-37.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/untitled/__pycache__/urls.cpython-37.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/untitled/settings.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/untitled/urls.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/untitled/wsgi.py</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -191,27 +469,36 @@
       <option name="presentableId" value="Default" />
       <updated>1541532716307</updated>
     </task>
+    <task id="LOCAL-00001" summary="arreglado">
+      <created>1541626621101</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1541626621101</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="25" width="1309" height="743" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25415677" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32952693" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.23980424" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.37974682" />
       <window_info anchor="bottom" id="Python Console" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32952693" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="SciView" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -226,20 +513,81 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="arreglado" />
+    <option name="LAST_COMMIT_MESSAGE" value="arreglado" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../2018-2-Los-mas-lolein-de-Ingenieria-T4/2018-2-Los-mas-lolein-de-Ingenieria-T4/settings.py" />
-    <entry file="file://$PROJECT_DIR$/../2018-2-Los-mas-lolein-de-Ingenieria-T4/2018-2-Los-mas-lolein-de-Ingenieria-T4/urls.py" />
-    <entry file="file://$PROJECT_DIR$/../2018-2-Los-mas-lolein-de-Ingenieria-T4/cevichecorp/models.py">
+    <entry file="file://$PROJECT_DIR$/untitled/settings.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/untitled/urls.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/untitled/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+        <state relative-caret-position="221">
+          <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../2018-2-Los-mas-lolein-de-Ingenieria-T4/cevichecorp/views.py">
+    <entry file="file://$PROJECT_DIR$/cevichecorp/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="213">
+          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyecto/cevichecorp/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyecto/cevichecorp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyecto/Proyecto/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding>
+            <element signature="e#662#694#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyecto/Proyecto/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="57" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyecto/Proyecto/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyecto/Proyecto/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyecto/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
         </state>
       </provider>
     </entry>
