@@ -2,43 +2,45 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.core.validators import MaxValueValidator, MinValueValidator
+
 # Create your models here.
 class Curso(models.Model):
     nombre = models.CharField(max_length=60)
-    codigo = models.CharField(max_length=15, primary_key=True)
-    seccion = models.IntegerField(primary_key=True)
-    anho = models.IntegerField(primary_key=True)
-    semestre = models.IntegerField(primary_key=True)
+    codigo = models.CharField(max_length=15)
+    seccion = models.IntegerField()
+    anho = models.IntegerField()
+    semestre = models.IntegerField()
+    class Meta:
+        unique_together = (('codigo','seccion','anho','semestre'))
 
 class PerteneceACurso(models.Model):
     rut = models.ForeignKey(User, on_delete=models.CASCADE, null=False, blank=False)
-    codigo = models.ForeignKey(Curso, on_delete=models.CASCADE, null=False, blank=False, related_name='codigo')
-    seccion = models.ForeignKey(Curso, on_delete=models.CASCADE, null=False, blank=False, related_name='seccion')
-    anho = models.ForeignKey(Curso, on_delete=models.CASCADE, null=False, blank=False, related_name='anho')
-    semestre = models.ForeignKey(Curso, on_delete=models.CASCADE, null=False, blank=False, related_name='semestre')
+    id_curso = models.ForeignKey(Curso, on_delete=models.CASCADE, null=False, blank=False)
     rol = models.CharField(max_length=20)
 
 class Coevaluacion(models.Model):
-    nombre=models.CharField(max_length=60,primary_key=True)
-    nombre_curso=models.ForeignKey(Curso,related_name='nombre',on_delete=models.CASCADE)
-    codigo_curso = models.ForeignKey(Curso,related_name='codigo',on_delete=models.CASCADE)
-    seccion_curso = models.ForeignKey(Curso,related_name='seccion',on_delete=models.CASCADE)
-    amho_curso = models.ForeignKey(Curso,related_name='anho',on_delete=models.CASCADE)
-    semestre_curso = models.ForeignKey(Curso,related_name='semestre',on_delete=models.CASCADE)
+    nombre=models.CharField(max_length=60)
+    id_curso = models.ForeignKey(Curso,on_delete=models.CASCADE)
     fecha_inicio= models.DateTimeField()
     fecha_termino=models.DateTimeField()
-    estatus=models.BooleanField() #Abierto True Cerrado False
+    status=models.BooleanField() #Abierto True Cerrado False
+    #Falta agregar las preguntas
 
 class Equipos(models.Model):
-     nombre=models.CharField(max_length=60,primary_key=True)
-     rut_alumno=models.ForeignKey(User,related_name='username', on_delete=models.CASCADE)
-     nombre_curso = models.ForeignKey(Curso, related_name='nombre', on_delete=models.CASCADE)
-     codigo_curso = models.ForeignKey(Curso, related_name='codigo', on_delete=models.CASCADE)
-     seccion_curso = models.ForeignKey(Curso, related_name='seccion', on_delete=models.CASCADE)
-     amho_curso = models.ForeignKey(Curso, related_name='anho', on_delete=models.CASCADE)
-     semestre_curso = models.ForeignKey(Curso, related_name='semestre', on_delete=models.CASCADE)
-     actual= models.BooleanField()
+    nombre=models.CharField(max_length=60)
+    rut_alumno=models.ForeignKey(User, on_delete=models.CASCADE)
+    id_curso = models.ForeignKey(Curso, on_delete=models.CASCADE)
+    actual= models.BooleanField()
 
+
+class Preguntas(models.Model):
+    id_coev = models.ForeignKey(Coevaluacion, on_delete=models.CASCADE)
+    id_curso = models.ForeignKey(Curso, on_delete=models.CASCADE)
+    texto_pregunta = models.CharField(max_length=200)
+    num_pregunta = models.IntegerField()
+    tipo_pregunta = models.CharField(max_length=20) #pregunta de texto o seleccion
+    ponderacion = models.FloatField(validators=[MinValueValidator(0), MaxValueValidator(1)])
+    respuesta = models.CharField(max_length=200)
 
 def validate_decimals(value):
     try:
@@ -49,15 +51,9 @@ def validate_decimals(value):
             params={'value': value},
         )
 
-
 class AlumnoTieneCoevaluacion(models.Model):
     rut = models.ForeignKey(User, on_delete=models.CASCADE, null=False, blank=False)
-    codigo = models.ForeignKey(Curso, on_delete=models.CASCADE, null=False, blank=False, related_name='codigo')
-    seccion = models.ForeignKey(Curso, on_delete=models.CASCADE, null=False, blank=False, related_name='seccion')
-    anho = models.ForeignKey(Curso, on_delete=models.CASCADE, null=False, blank=False, related_name='anho')
-    semestre = models.ForeignKey(Curso, on_delete=models.CASCADE, null=False, blank=False, related_name='semestre')
-    nombre_coev = models.ForeignKey(Coevaluacion, on_delete=models.CASCADE, null=False, blank=False,
-                                    related_name='nombre')
+    id_curso = models.ForeignKey(Curso, on_delete=models.CASCADE, null=False, blank=False)
+    id_coev = models.ForeignKey(Coevaluacion, on_delete=models.CASCADE, null=False, blank=False)
     contestada = models.BooleanField()
     nota = models.FloatField(validators=[MinValueValidator(1), MaxValueValidator(7), validate_decimals])
-
