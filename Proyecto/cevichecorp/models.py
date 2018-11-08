@@ -17,6 +17,8 @@ class PerteneceACurso(models.Model):
     rut = models.ForeignKey(User, on_delete=models.CASCADE, null=False, blank=False)
     id_curso = models.ForeignKey(Curso, on_delete=models.CASCADE, null=False, blank=False)
     rol = models.CharField(max_length=20)
+    class Meta:
+        unique_together = (('rut','id_curso'))
 
 class Coevaluacion(models.Model):
     nombre=models.CharField(max_length=60)
@@ -24,24 +26,34 @@ class Coevaluacion(models.Model):
     fecha_inicio= models.DateTimeField()
     fecha_termino=models.DateTimeField()
     status=models.BooleanField() #Abierto True Cerrado False
-    #Falta agregar las preguntas
+    class Meta:
+        unique_together = (('nombre','id_curso'))
 
 class Equipos(models.Model):
     nombre=models.CharField(max_length=60)
     rut_alumno=models.ForeignKey(User, on_delete=models.CASCADE)
     id_curso = models.ForeignKey(Curso, on_delete=models.CASCADE)
     actual= models.BooleanField()
-
+    class Meta:
+        unique_together = (('nombre','rut_alumno','id_curso'))
 
 class Preguntas(models.Model):
     id_coev = models.ForeignKey(Coevaluacion, on_delete=models.CASCADE)
-    id_curso = models.ForeignKey(Curso, on_delete=models.CASCADE)
     texto_pregunta = models.CharField(max_length=200)
     num_pregunta = models.IntegerField()
     tipo_pregunta = models.CharField(max_length=20) #pregunta de texto o seleccion
     ponderacion = models.FloatField(validators=[MinValueValidator(0), MaxValueValidator(1)])
-    respuesta = models.CharField(max_length=200)
-    a =0
+    class Meta:
+        unique_together = (('id_coev','num_pregunta','texto_pregunta'))
+
+class RespuestasAlumnos(models.Model):
+    id_pregunta = models.ForeignKey(Preguntas, on_delete=models.CASCADE)
+    rut_desde = models.ForeignKey(User, on_delete=models.CASCADE, related_name="desde")
+    rut_objetivo = models.ForeignKey(User, on_delete=models.CASCADE, related_name="para")
+    respuesta = models.CharField(max_length=150)
+    class Meta:
+        unique_together = (('id_pregunta','rut_desde','rut_objetivo'))
+
 
 def validate_decimals(value):
     try:
@@ -58,3 +70,5 @@ class AlumnoTieneCoevaluacion(models.Model):
     id_coev = models.ForeignKey(Coevaluacion, on_delete=models.CASCADE, null=False, blank=False)
     contestada = models.BooleanField()
     nota = models.FloatField(validators=[MinValueValidator(1), MaxValueValidator(7), validate_decimals])
+    class Meta:
+        unique_together = (('rut','id_curso','id_coev'))
