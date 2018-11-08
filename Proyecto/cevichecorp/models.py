@@ -41,6 +41,7 @@ class Preguntas(models.Model):
     tipo_pregunta = models.CharField(max_length=20) #pregunta de texto o seleccion
     ponderacion = models.FloatField(validators=[MinValueValidator(0), MaxValueValidator(1)])
     respuesta = models.CharField(max_length=200)
+    a =0
 
 def validate_decimals(value):
     try:
