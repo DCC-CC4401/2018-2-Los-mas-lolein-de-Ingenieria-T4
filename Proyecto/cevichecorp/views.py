@@ -21,3 +21,13 @@ def index(request):
         else :
             return render(request,'login.html')
 
+
+def curso(request):
+    cursos = PerteneceACurso.objects.all()
+    user_name = user.get_username() #Puede hacer con un filter
+    for curso in cursos:
+        if user_name==curso.rut:
+            #recuperar curso
+
+
+

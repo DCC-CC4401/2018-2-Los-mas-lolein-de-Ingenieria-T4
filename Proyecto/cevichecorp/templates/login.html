@@ -1,8 +1,3 @@
-<<<<<<< HEAD:Proyecto/cevichecorp/templates/registration/login.html
-
-
-=======
->>>>>>> 244be10c124c251b0e635d4636ba1d36c58321b0:Proyecto/cevichecorp/templates/login.html
 <!DOCTYPE html>
     <html lang="es">
     <head>
@@ -31,25 +26,13 @@
 
         <!-- Cuerpo -->
         <div class="container text-center"> <!-- Contenedor responsivo, se adapta a la pantalla con puntos de quiebre. -->
-
-
-
-
-<<<<<<< HEAD:Proyecto/cevichecorp/templates/registration/login.html
-            <form class="form-signin" method="post" action="{% url "index" %}">
-=======
-            <form class="form-signin" method="post"><h2>Login</h2>
->>>>>>> 244be10c124c251b0e635d4636ba1d36c58321b0:Proyecto/cevichecorp/templates/login.html
+            <form class="form-signin" method="post" action="{% url "index" %}"><h2>Login</h2>
                 {% csrf_token %}
                 <h1 class="mt-5 mb-3">Bienvenid@</h1>
                 <h3 class="font-weight-normal mb-3">Inicia sesión para acceder</h3>
                 <p class="mb-2">Ingresa con tu RUT y contraseña</p>
                 <label for="inputUser" class="sr-only">RUT</label>
-<<<<<<< HEAD:Proyecto/cevichecorp/templates/registration/login.html
                 <input name="rut" id="inputUser" class="form-control" placeholder="RUT" required autofocus>
-=======
-                <input  id="inputUser" class="form-control" placeholder="RUT" required autofocus>
->>>>>>> 244be10c124c251b0e635d4636ba1d36c58321b0:Proyecto/cevichecorp/templates/login.html
                 <label for="inputPassword" class="sr-only">Contraseña</label>
                 <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
                 <button class="btn btn-lg btn-primary-custom px-5 mt-3" type="submit">Ingresar</button>
@@ -58,4 +41,3 @@
         </div>
     </body>
     </html>
--->
