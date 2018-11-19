@@ -25,7 +25,7 @@ class Coevaluacion(models.Model):
     id_curso = models.ForeignKey(Curso,on_delete=models.CASCADE)
     fecha_inicio= models.DateTimeField()
     fecha_termino=models.DateTimeField()
-    status=models.BooleanField() #Abierto True Cerrado False
+    status=models.IntegerField() #prepublicado 0 abierta 1, cerrada 2, publicada 3
     class Meta:
         unique_together = (('nombre','id_curso'))
 
@@ -64,11 +64,12 @@ def validate_decimals(value):
             params={'value': value},
         )
 
+
+
 class AlumnoTieneCoevaluacion(models.Model):
-    rut = models.ForeignKey(User, on_delete=models.CASCADE, null=False, blank=False)
-    id_curso = models.ForeignKey(Curso, on_delete=models.CASCADE, null=False, blank=False)
+    id_curso = models.ForeignKey(PerteneceACurso, on_delete=models.CASCADE, null=False, blank=False)
     id_coev = models.ForeignKey(Coevaluacion, on_delete=models.CASCADE, null=False, blank=False)
-    contestada = models.BooleanField()
+    contestada = models.BooleanField(default=False)
     nota = models.FloatField(validators=[MinValueValidator(1), MaxValueValidator(7), validate_decimals])
     class Meta:
-        unique_together = (('rut','id_curso','id_coev'))
+        unique_together = (('id_curso','id_coev'))

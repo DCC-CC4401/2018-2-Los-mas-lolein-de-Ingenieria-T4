@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
     <html lang="es">
     <head>
@@ -26,9 +27,13 @@
 
         <!-- Cuerpo -->
         <div class="container text-center"> <!-- Contenedor responsivo, se adapta a la pantalla con puntos de quiebre. -->
-            <form class="form-signin" method="post" action="{% url "index" %}"><h2>Login</h2>
+
+
+            <form class="form-signin" method="post" action="{% url "index" %}">
+
                 {% csrf_token %}
                 <h1 class="mt-5 mb-3">Bienvenid@</h1>
+                 {{mensaje}}
                 <h3 class="font-weight-normal mb-3">Inicia sesión para acceder</h3>
                 <p class="mb-2">Ingresa con tu RUT y contraseña</p>
                 <label for="inputUser" class="sr-only">RUT</label>
