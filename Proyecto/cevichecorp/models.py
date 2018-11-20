@@ -51,6 +51,7 @@ class RespuestasAlumnos(models.Model):
     rut_desde = models.ForeignKey(User, on_delete=models.CASCADE, related_name="desde")
     rut_objetivo = models.ForeignKey(User, on_delete=models.CASCADE, related_name="para")
     respuesta = models.CharField(max_length=150)
+    nota = models.FloatField()
     class Meta:
         unique_together = (('id_pregunta','rut_desde','rut_objetivo'))
 
@@ -70,6 +71,7 @@ class AlumnoTieneCoevaluacion(models.Model):
     id_curso = models.ForeignKey(PerteneceACurso, on_delete=models.CASCADE, null=False, blank=False)
     id_coev = models.ForeignKey(Coevaluacion, on_delete=models.CASCADE, null=False, blank=False)
     contestada = models.BooleanField(default=False)
-    nota = models.FloatField(validators=[MinValueValidator(1), MaxValueValidator(7), validate_decimals])
+    notapromedio = models.FloatField(validators=[MinValueValidator(1), MaxValueValidator(7), validate_decimals])
     class Meta:
         unique_together = (('id_curso','id_coev'))
+

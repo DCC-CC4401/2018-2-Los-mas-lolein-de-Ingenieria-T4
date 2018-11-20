@@ -2,70 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c0eb4a8-a47c-42a1-8ccf-d0914e06eba6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/css/coeval.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/icon/answer-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/icon/cargos-alumno.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/icon/cargos-auxiliar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/icon/cargos-ayudante.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/icon/cargos-profesor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/icon/details-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/icon/edit-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/icon/export-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/icon/load-data-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/icon/publish-icon-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/icon/publish-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/icon/reminder-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/icon/x-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/static/js/coeval.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/templates/coevaluacion-vista-alumno.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/templates/coevaluacion-vista-docente.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/templates/curso-vista-alumno.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/templates/curso-vista-docente.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/templates/home-vista-alumno.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/templates/home-vista-profesor.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/templates/perfil-alumno-vista-docente.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/templates/perfil-vista-dueno.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cevichecorp/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cevichecorp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/cevichecorp/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cevichecorp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cevichecorp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cevichecorp/templates/perfil-vista-dueno.html" beforeDir="false" afterPath="$PROJECT_DIR$/cevichecorp/templates/perfil-vista-dueno.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cevichecorp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cevichecorp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cevichecorp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cevichecorp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -81,26 +44,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="2" />
-          <entry key="py" value="6" />
+          <entry key="html" value="5" />
+          <entry key="js" value="1" />
+          <entry key="py" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="2" />
-          <entry key="Python" value="6" />
+          <entry key="HTML" value="5" />
+          <entry key="JavaScript" value="1" />
+          <entry key="Python" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="25" />
-          <entry key="py" value="293" />
+          <entry key="html" value="151" />
+          <entry key="py" value="1420" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="25" />
-          <entry key="Python" value="293" />
+          <entry key="HTML" value="151" />
+          <entry key="Python" value="1420" />
         </counts>
       </usages-collector>
     </session>
@@ -108,10 +73,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Proyecto/settings.py">
+        <entry file="file://$PROJECT_DIR$/cevichecorp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+            <state relative-caret-position="170">
+              <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cevichecorp/templates/perfil-vista-dueno.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="130" column="116" selection-start-line="130" selection-start-column="116" selection-end-line="130" selection-end-column="116" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cevichecorp/static/js/coeval.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -119,28 +105,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cevichecorp/templates/home-vista-alumno.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-493">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="262">
+              <caret line="77" column="70" selection-start-line="77" selection-start-column="70" selection-end-line="77" selection-end-column="70" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cevichecorp/templates/login.html">
+        <entry file="file://$PROJECT_DIR$/cevichecorp/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="36" column="54" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cevichecorp/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+            <state relative-caret-position="296">
+              <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cevichecorp/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,22 +138,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cevichecorp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="48" />
+            <state relative-caret-position="189">
+              <caret line="61" column="56" lean-forward="true" selection-start-line="61" selection-start-column="56" selection-end-line="61" selection-end-column="56" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <marker date="1542663513409" expanded="true" signature="782:979" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cevichecorp/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <marker date="1542673034367" expanded="true" signature="1715:1994" ph="..." />
+                <marker date="1542673034367" expanded="true" signature="2121:2122" ph="..." />
               </folding>
             </state>
           </provider>
@@ -176,9 +155,17 @@
     <findStrings>
       <find>registration</find>
       <find>registration/login</find>
+      <find>juanit</find>
+      <find>juanito</find>
+      <find>chang</find>
+      <find>changePass</find>
+      <find>cambiar</find>
+      <find>yesno</find>
+      <find>cambiar-c</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/cevichecorp</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -189,7 +176,10 @@
       <list>
         <option value="$PROJECT_DIR$/cevichecorp/templates/login.html" />
         <option value="$PROJECT_DIR$/cevichecorp/templates/home-vista-alumno.html" />
+        <option value="$PROJECT_DIR$/cevichecorp/models.py" />
+        <option value="$PROJECT_DIR$/cevichecorp/admin.py" />
         <option value="$PROJECT_DIR$/cevichecorp/urls.py" />
+        <option value="$PROJECT_DIR$/cevichecorp/templates/perfil-vista-dueno.html" />
         <option value="$PROJECT_DIR$/cevichecorp/views.py" />
       </list>
     </option>
@@ -231,13 +221,13 @@
               <item name="Proyecto" type="b2602c69:ProjectViewProjectNode" />
               <item name="Proyecto" type="462c0819:PsiDirectoryNode" />
               <item name="cevichecorp" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Proyecto" type="b2602c69:ProjectViewProjectNode" />
               <item name="Proyecto" type="462c0819:PsiDirectoryNode" />
               <item name="cevichecorp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Proyecto" type="b2602c69:ProjectViewProjectNode" />
@@ -310,13 +300,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="25" width="1309" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17498021" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32952693" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32952693" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -325,13 +316,13 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32952693" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32952693" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32858273" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,7 +341,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Proyecto/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
+        <state relative-caret-position="211">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
@@ -362,19 +353,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cevichecorp/urls.py">
+    <entry file="file://$PROJECT_DIR$/cevichecorp/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+        <state relative-caret-position="296">
+          <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cevichecorp/models.py">
+    <entry file="file://$PROJECT_DIR$/cevichecorp/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
+        <state relative-caret-position="170">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cevichecorp/static/js/coeval.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cevichecorp/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cevichecorp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -383,25 +399,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cevichecorp/templates/home-vista-alumno.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-493">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="262">
+          <caret line="77" column="70" selection-start-line="77" selection-start-column="70" selection-end-line="77" selection-end-column="70" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cevichecorp/templates/login.html">
+    <entry file="file://$PROJECT_DIR$/cevichecorp/templates/perfil-vista-dueno.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="36" column="54" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="54" />
+        <state relative-caret-position="259">
+          <caret line="130" column="116" selection-start-line="130" selection-start-column="116" selection-end-line="130" selection-end-column="116" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cevichecorp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="48" />
+        <state relative-caret-position="189">
+          <caret line="61" column="56" lean-forward="true" selection-start-line="61" selection-start-column="56" selection-end-line="61" selection-end-column="56" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <marker date="1542663513409" expanded="true" signature="782:979" ph="..." />
+            <marker date="1542673034367" expanded="true" signature="1715:1994" ph="..." />
+            <marker date="1542673034367" expanded="true" signature="2121:2122" ph="..." />
           </folding>
         </state>
       </provider>

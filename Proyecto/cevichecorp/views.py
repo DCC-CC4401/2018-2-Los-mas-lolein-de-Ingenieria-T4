@@ -40,3 +40,29 @@ def index(request):
 def out(request):
     logout(request)
     return HttpResponseRedirect("/")
+
+def perfil(request):
+    if request.user.is_authenticated:
+        usuarioactual = request.user
+        nombre = request.user.get_full_name()
+        mail= usuarioactual.email
+        return render(request, "perfil-vista-dueno.html", {'usuario':nombre,'rut': usuarioactual, 'mail':mail})
+
+    else:
+        return render(request, 'login.html', {'mensaje': 'Debe iniciar sesión para ingresar.'})
+
+def cambioContrasena(request):
+    if request.user.is_authenticated:
+        usuarioactual = request.user
+        old_pass = request.POST['passOld']
+        new_pass = request.POST['passNew']
+        new_pass_confirm = request.POST['passNewConfirm']
+        user = authenticate(request, username=usuarioactual, password=old_pass)
+        if user is not None and new_pass== new_pass_confirm:
+            usuarioactual.set_password(new_pass_confirm)
+            return HttpResponseRedirect("/perfil/") # BUSCAR COMO MANDAR MENSDAJE
+
+        else :
+            return HttpResponseRedirect("/perfil") #BUSCAR COMO MANDZR MENSAJR
+    else:
+        return render(request, 'login.html', {'mensaje': 'Debe iniciar sesión para ingresar.'})
