@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../static/css/coeval.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="../static/js/bootstrap.min.js"></script>
+        <script src="../static/js/coeval.js"></script>
+        <title>Sistema de Coevaluaciones DCC</title>
+    </head>
+    <body>
+        <!-- Barra superior -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 py-3">
+            <a class="navbar-brand" href="../">Sistema de Coevaluaciones DCC</a>
+            <!-- Al achicar la pantalla, el menú se oculta y se vuelve desplegable mediante este botón. -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fa fa-navicon"></i>
+                </span>
+            </button>
+
+            <!-- Menú superior-derecha -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="divider-vertical"></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{{usuario}}</a>
+                    </li>
+                    <li class="divider-vertical"></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../out">Cerrar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- FIN Barra superior -->
+
+        <!-- Cuerpo -->
+        <div class="container mt-4"> <!-- Contenedor responsivo, se adapta a la pantalla con puntos de quiebre. -->
+
+            <!-- Tablas de resumen -->
+            <div class="row">
+                <!-- Tabla de coevaluaciones -->
+                <div class="col-md-9">
+                    <h4 class="d-inline-block mt-1">Últimas Coevaluaciones</h4>
+                    <div class="table-wrap table-responsive my-1"> <!-- "Envoltura" de la tabla -->
+                        <table class="table table-coeval table-striped table-hover mb-0"> <!-- Tabla -->
+                            <!-- Encabezados de tabla (Table Headers) -->
+                            <thead class="thead-light">
+                                <tr> <!-- Fila (Table Row) -->
+                                    <th class="th-fecha">Fecha inicio</th>
+                                    <th class="th-titulo">Nombre</th>
+                                    <th class="th-curso">Curso</th>
+                                    <th class="th-semestre">Sem</th>
+                                    <th class="th-fecha">Fecha límite</th>
+                                    <th class="th-estado">Estado</th>
+                                    <th class="th-iconos"></th>
+                                </tr>
+                            </thead>
+
+                            <!-- Cuerpo de tabla (Table Data) -->
+                            <tbody>
+                            <!-- Aquí empieza el for -->
+                            {% for c in coev %}
+
+
+                                <tr class="tr-{{ c.contestada|yesno:"no,pendiente"}}"> <!-- Fila destacada como Pendiente -->
+                                    <!-- Fecha de inicio -->
+                                    <td class="td-fecha">
+                                       {{c.id_coev.fecha_inicio|time:"H:i"  }} {{c.id_coev.fecha_inicio|date:"d/m/y" }}
+                                    </td>
+                                    <!-- Título de coevaluación -->
+                                    <td>{{c.id_coev.nombre}}</td>
+                                    <!-- Curso, con ícono de rol, nombre y código -->
+                                    <td class="td-curso-full">
+                                        <div class="cargos cargos-{{c.id_curso.rol}} tooltip-custom">
+                                            <span class="tooltiptext"></span>
+                                        </div>
+
+                                        <span class="curso-nombre">{{c.id_curso.id_curso.nombre}}</span>
+                                        <br>
+                                        <span class="curso-codigo">{{c.id_curso.id_curso.codigo}}-{{c.id_curso.id_curso.seccion}}</span>
+                                    </td>
+                                    <!-- Semestre -->
+                                    <td>{{c.id_curso.id_curso.anho}}-{{c.id_curso.id_curso.semestre}}</td>
+                                    <!-- Fecha de término -->
+                                    <td class="td-fecha">
+                                        {{c.id_coev.fecha_termino|time:"H:i"  }} {{c.id_coev.fecha_termino|date:"d/m/y" }}
+                                    </td>
+                                    <!-- Estado -->
+                                    <td>{% if c.id_coev.status == 1 %} <!--abierta -->
+                                            {% if c.contestada %}
+                                                Hecho
+                                            {% else %}
+                                                Pendiente
+                                            {% endif %}
+
+                                        {%  elif c.id_coev.status == 2 %} <!--cerrada -->
+                                             Cerrada
+
+                                         {%  elif c.id_coev.status == 3 %} <!--Publicada -->
+                                            Publicada
+                                        {% endif %}
+
+
+                                       </td>
+                                    <!-- Ícono de acción (responder) -->
+                                     {% if c.id_coev.status == 1 %} <!--abierta -->
+                                            {% if c.contestada %}
+                                                Hecho
+                                            {% else %}
+                                               <td class="td-icon">
+                                        <a href="#" title="Responder coevaluación"><img class="clickable-icon answer-icon wiggle" src="../static/icon/answer-icon.png" alt="Responder coevaluación" width="28" height="28"></a>
+                                    </td>
+                                            {% endif %}
+                                        {% endif %}
+
+                                </tr>
+                            <!--Aquí termina un for-->
+                            {% endfor %}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Tabla de cursos -->
+                <div class="col-md-3 mb-3">
+                    <h4 class="d-inline-block mt-1">Tus Cursos</h4>
+
+                    <div class="table-wrap table-responsive my-1">
+                        <table class="table table-cursos table-striped table-hover mb-0">
+                            <!-- Encabezados de tabla (Table Headers) -->
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Curso</th>
+                                    <th class="th-semestre">Sem</th>
+                                </tr>
+                            </thead>
+                            <!-- Cuerpo de tabla (Table Data) -->
+                            <tbody>
+                                {% for c in cursos %}
+                                <tr>
+                                    <td class="td-curso-full">
+                                        <div class="cargos cargos-{{c.rol}} tooltip-custom">
+                                            <span class="tooltiptext"></span>
+                                        </div>
+                                        <span class="curso-nombre">{{c.id_curso.nombre}}</span>
+                                        <br>
+                                        <span class="curso-codigo">{{c.id_curso.codigo}}-{{c.id_curso.seccion}}</span>
+                                    </td>
+                                    <td>{{c.id_curso.anho}}-{{c.id_curso.semestre}}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+            
+    </body>
+    </html>
+        
