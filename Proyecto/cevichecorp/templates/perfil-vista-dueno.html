@@ -73,39 +73,22 @@
                             </thead>
                             <!-- Cuerpo de tabla (Table Data) -->
                             <tbody>
-                                <tr id="row-btn" onclick="showNotas()">
+
+                            {% for curso in cursos %}
+
+                                <tr id="row-btn" onclick="showNotas(curso.id_curso.nombre)" >
                                     <td class="td-curso-full">
-                                        <div class="cargos cargos-alumno tooltip-custom">
+                                        <div class="cargos cargos-{{ curso.rol }} tooltip-custom">
                                             <span class="tooltiptext"></span>
                                         </div>
-                                        <span class="curso-nombre">Proyecto de Software (clickeable)</span>
+                                        <span class="curso-nombre">{{ curso.id_curso.nombre }}</span>
                                         <br>
-                                        <span class="curso-codigo">CC5402-1</span>
+                                        <span class="curso-codigo">{{ curso.id_curso.codigo }}</span>
                                     </td>
-                                    <td>2018-2</td>
+                                    <td>{{ curso.id_curso.anho }}-{{ curso.id_curso.semestre }}</td>
                                 </tr>
-                                <tr>
-                                    <td class="td-curso-full">
-                                        <div class="cargos cargos-alumno tooltip-custom">
-                                            <span class="tooltiptext"></span>
-                                        </div>
-                                        <span class="curso-nombre">Ingeniería de Software II</span>
-                                        <br>
-                                        <span class="curso-codigo">CC5401-1</span>
-                                    </td>
-                                    <td>2018-1</td>
-                                </tr>
-                                <tr>
-                                    <td class="td-curso-full">
-                                        <div class="cargos cargos-alumno tooltip-custom">
-                                            <span class="tooltiptext"></span>
-                                        </div>
-                                        <span class="curso-nombre">Ingeniería de Software I</span>
-                                        <br>
-                                        <span class="curso-codigo">CC4401-1</span>
-                                    </td>
-                                    <td>2017-2</td>
-                                </tr>
+
+                            {% endfor %}
                             </tbody>
                         </table>
                     </div>
@@ -137,9 +120,10 @@
                     <div id="notas-placeholder" class="mt-5">
                         <h5 class="font-weight-normal text-center text-muted">Selecciona un curso para ver tus notas</h5>
                     </div>
+                    {% for curso in cursos %}
                     <div id="notas-resumen">
                         <h4 class="d-inline-block mt-1">Tus Notas</h4>
-                        <h5 class="float-right mb-0 mt-2 text-muted" id="currentCurso">CC5402-1, 2018-2</h5>
+                        <h5 class="float-right mb-0 mt-2 text-muted" id="currentCurso">{{ curso.id_curso.codigo }}-{{ curso.id_curso.seccion }}, {{ curso.id_curso.anho }}-{{ curso.id_curso.semestre }}</h5>
 
                         <div class="table-wrap table-responsive my-1"> <!-- "Envoltura" de la tabla -->
                             <table class="table table-notas-perfil table-striped table-hover mb-0"> <!-- Tabla -->
@@ -181,6 +165,7 @@
                             </table>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

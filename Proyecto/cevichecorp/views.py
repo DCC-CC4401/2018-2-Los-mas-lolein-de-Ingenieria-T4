@@ -14,8 +14,9 @@ def index(request):
         nombre= request.user.get_full_name()
         cursosusuario= PerteneceACurso.objects.filter(rut=usuarioactual)
         listaids=list()
+        #Hay un bug cuando no hay coevaluaciones existentes para un curso
         for curso in cursosusuario:
-             listaids.append (AlumnoTieneCoevaluacion.objects.get(id_curso= curso).pk)
+             listaids.append (AlumnoTieneCoevaluacion.objects.get(id_curso=curso).pk)
         coevaluaciones = AlumnoTieneCoevaluacion.objects.filter(pk__in=listaids )
         return render(request, 'home-vista-alumno.html',{'coev': coevaluaciones,'cursos':cursosusuario,'usuario': nombre})
 
@@ -46,7 +47,14 @@ def perfil(request):
         usuarioactual = request.user
         nombre = request.user.get_full_name()
         mail= usuarioactual.email
-        return render(request, "perfil-vista-dueno.html", {'usuario':nombre,'rut': usuarioactual, 'mail':mail})
+        cursos_usuario = PerteneceACurso.objects.filter(rut=usuarioactual)
+        dicti = {
+            'usuario':nombre,
+            'rut': usuarioactual,
+            'mail':mail,
+            'cursos': cursos_usuario
+            }
+        return render(request, "perfil-vista-dueno.html", dicti)
 
     else:
         return render(request, 'login.html', {'mensaje': 'Debe iniciar sesión para ingresar.'})
@@ -58,11 +66,12 @@ def cambioContrasena(request):
         new_pass = request.POST['passNew']
         new_pass_confirm = request.POST['passNewConfirm']
         user = authenticate(request, username=usuarioactual, password=old_pass)
-        if user is not None and new_pass== new_pass_confirm:
+        if user is not None and new_pass==new_pass_confirm:
             usuarioactual.set_password(new_pass_confirm)
+            usuarioactual.save()
             return HttpResponseRedirect("/perfil/") # BUSCAR COMO MANDAR MENSDAJE
 
         else :
-            return HttpResponseRedirect("/perfil") #BUSCAR COMO MANDZR MENSAJR
+            return HttpResponseRedirect("/perfil/") #BUSCAR COMO MANDZR MENSAJR
     else:
         return render(request, 'login.html', {'mensaje': 'Debe iniciar sesión para ingresar.'})

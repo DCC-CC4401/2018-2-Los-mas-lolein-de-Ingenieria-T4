@@ -29,15 +29,15 @@ function cancelAdd() {
 
 function changePass() {
     document.getElementById("cambiar-contrasena").style.display = "block";
-    document.getElementById("notas-resumen").style.display = "none";
+    document.querySelector('[id^="notas-resumen"]').style.display = "none";
     document.getElementById("notas-placeholder").style.display = "none";
     document.getElementById("change-pass-btn").classList.add("active");
     document.getElementById("row-btn").classList.remove("active");
 }
 
-function showNotas() {
+function showNotas(nombreCurso) {
     document.getElementById("cambiar-contrasena").style.display = "none";
-    document.getElementById("notas-resumen").style.display = "block";
+    document.getElementById("notas-resumen-"+nombreCurso).style.display = "block";
     document.getElementById("notas-placeholder").style.display = "none";
     document.getElementById("row-btn").classList.add("active");
     var changePass = document.getElementById("change-pass-btn");
