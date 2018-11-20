@@ -14,9 +14,8 @@ def index(request):
         nombre= request.user.get_full_name()
         cursosusuario= PerteneceACurso.objects.filter(rut=usuarioactual)
         listaids=list()
-        #Hay un bug cuando no hay coevaluaciones existentes para un curso
         for curso in cursosusuario:
-             listaids.append (AlumnoTieneCoevaluacion.objects.get(id_curso=curso).pk)
+             listaids.append (AlumnoTieneCoevaluacion.objects.get(id_curso= curso).pk)
         coevaluaciones = AlumnoTieneCoevaluacion.objects.filter(pk__in=listaids )
         return render(request, 'home-vista-alumno.html',{'coev': coevaluaciones,'cursos':cursosusuario,'usuario': nombre})
 
@@ -62,16 +61,21 @@ def perfil(request):
 def cambioContrasena(request):
     if request.user.is_authenticated:
         usuarioactual = request.user
+        nombre = request.user.get_full_name()
+        mail = usuarioactual.email
         old_pass = request.POST['passOld']
         new_pass = request.POST['passNew']
         new_pass_confirm = request.POST['passNewConfirm']
         user = authenticate(request, username=usuarioactual, password=old_pass)
-        if user is not None and new_pass==new_pass_confirm:
+        if user is not None and new_pass== new_pass_confirm:
             usuarioactual.set_password(new_pass_confirm)
             usuarioactual.save()
-            return HttpResponseRedirect("/perfil/") # BUSCAR COMO MANDAR MENSDAJE
-
-        else :
-            return HttpResponseRedirect("/perfil/") #BUSCAR COMO MANDZR MENSAJR
+            user = authenticate(request, username=usuarioactual, password=new_pass_confirm)
+            if user is not None:
+                return render(request, "perfil-vista-dueno.html", {'usuario':nombre,'rut':usuarioactual, 'mail':mail, 'mensaje': 'Se ha actualizado de manera exitosa la contraseña.'})
+            else:
+                return render(request, 'login.html', {'mensaje': 'Debe iniciar sesión para ingresar.'})
+        else:
+            return render(request, "perfil-vista-dueno.html", {'usuario':nombre,'rut':usuarioactual, 'mail':mail, 'mensaje': 'La contraseña ingresada es incorrecta o ambas contraseñas nuevas no coinciden'})
     else:
         return render(request, 'login.html', {'mensaje': 'Debe iniciar sesión para ingresar.'})

@@ -10,6 +10,7 @@
         <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
         <script src="{% static "js/bootstrap.min.js" %}"></script>
         <script src="{% static "js/coeval.js" %}"></script>
+        <script src="{% static "js/formatearyvalidarrut.js" %}"></script>
         <title>Login - Sistema de Coevaluaciones DCC</title>
     </head>
     <body>
@@ -37,7 +38,8 @@
                 <h3 class="font-weight-normal mb-3">Inicia sesión para acceder</h3>
                 <p class="mb-2">Ingresa con tu RUT y contraseña</p>
                 <label for="inputUser" class="sr-only">RUT</label>
-                <input name="rut" id="inputUser" class="form-control" placeholder="RUT" required autofocus>
+                <input name="rut" id="inputUser" class="form-control" placeholder="RUT" required autofocus
+                maxlength="12" onkeyup="formatRUT(this)">
                 <label for="inputPassword" class="sr-only">Contraseña</label>
                 <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
                 <button class="btn btn-lg btn-primary-custom px-5 mt-3" type="submit">Ingresar</button>
