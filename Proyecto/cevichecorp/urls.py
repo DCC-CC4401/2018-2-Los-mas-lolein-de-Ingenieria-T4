@@ -7,5 +7,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('out/',views.out, name='out'),
     path('perfil/',views.perfil, name='perfil'),
-    path('cambioContrasena/',views.cambioContrasena, name='cambioContrasena')
+    path('cambioContrasena/',views.cambioContrasena, name='cambioContrasena'),
+    path('coevaluacion',views.coevaluacion,name='coevaluacion')
  ]
