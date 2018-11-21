@@ -85,3 +85,23 @@ def cambioContrasena(request):
             return render(request, "perfil-vista-dueno.html", {'usuario':nombre,'rut':usuarioactual, 'mail':mail, 'mensaje': 'La contraseña ingresada es incorrecta o ambas contraseñas nuevas no coinciden'})
     else:
         return render(request, 'login.html', {'mensaje': 'Debe iniciar sesión para ingresar.'})
+
+
+def coevaluacion(request):
+    if request.user.is_authenticated:
+        usuario=request.user.get_full_name
+        id= request.GET.get('coev')
+        coev= AlumnoTieneCoevaluacion.objects.get(pk=int(id))
+        equipo= Equipos.objects.get(rut_alumno=request.user,actual=True)
+        nombre=equipo.nombre
+        mates=Equipos.objects.exclude(rut_alumno=request.user).filter(nombre=nombre, actual=True)
+        if request.GET.get('alumno') is not None:
+            correspondiente=User.objects.get(username=request.GET.get('alumno'))
+        else :
+            correspondiente=None
+
+        return render(request, 'coevaluacion-vista-alumno.html',{'usuario':usuario,'coev':coev,'mates':mates,'correspondiente':correspondiente,'id':id})
+
+
+    else:
+        return render(request, 'login.html', {'mensaje': 'Debe iniciar sesión para ingresar.'})
