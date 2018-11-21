@@ -26,7 +26,11 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="divider-vertical"></li>
                     <li class="nav-item">
+<<<<<<< HEAD
                         <a class="nav-link" href="./perfil">{{usuario}}</a>
+=======
+                        <a class="nav-link" href="../perfil">{{usuario}}</a>
+>>>>>>> 5cb2197880535db2596fb85be4e9ab5efcf0b777
                     </li>
                     <li class="divider-vertical"></li>
                     <li class="nav-item">
@@ -111,9 +115,17 @@
                                             {% if c.contestada %}
                                                 Hecho
                                             {% else %}
-                                               <td class="td-icon">
-                                        <a href="#" title="Responder coevaluación"><img class="clickable-icon answer-icon wiggle" src="../static/icon/answer-icon.png" alt="Responder coevaluación" width="28" height="28"></a>
-                                    </td>
+
+                                                  <td class="td-icon">
+
+                                                   <a title="Responder coevaluación" href="/coevaluacion?coev={{c.pk|urlencode }}">
+                                                       <img class="clickable-icon answer-icon wiggle" src="../static/icon/answer-icon.png" alt="Responder coevaluación" width="28" height="28">
+                                                   </a>
+                                               </td>
+
+
+
+
                                             {% endif %}
                                         {% endif %}
 
