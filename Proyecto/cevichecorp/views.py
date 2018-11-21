@@ -18,7 +18,7 @@ def index(request):
             if AlumnoTieneCoevaluacion.objects.filter(id_curso=curso).exists():
                 coevs = AlumnoTieneCoevaluacion.objects.filter(id_curso= curso)
                 for coev in coevs:
-                    listaids.append (coev.pk)
+                    listaids.append(coev.pk)
         coevaluaciones = AlumnoTieneCoevaluacion.objects.filter(pk__in=listaids )
 
         dic = {
@@ -60,7 +60,9 @@ def perfil(request):
         # Hay un bug cuando no hay coevaluaciones existentes para un curso
         for curso in cursos_usuario:
             if AlumnoTieneCoevaluacion.objects.filter(id_curso=curso).exists():
-                listaids.append(AlumnoTieneCoevaluacion.objects.get(id_curso=curso).pk)
+                coevs = AlumnoTieneCoevaluacion.objects.filter(id_curso= curso)
+                for coev in coevs:
+                    listaids.append(coev.pk)
         coevaluaciones = AlumnoTieneCoevaluacion.objects.filter(pk__in=listaids)
         dicti = {
             'usuario':nombre,
