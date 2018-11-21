@@ -78,7 +78,7 @@
 
                             {% for curso in cursos %}
 
-                                <tr id="row-btn" onclick="showNotas({{ curso.id_curso.pk }})" >
+                                <tr id="row-btn-{{ curso.id_curso.pk }}" onclick="showNotas({{ curso.id_curso.pk }})" >
                                     <td class="td-curso-full">
                                         <div class="cargos cargos-{{ curso.rol }} tooltip-custom">
                                             <span class="tooltiptext"></span>
@@ -125,7 +125,7 @@
                     {% for curso in cursos %}
                     <div id="notas-resumen-{{ curso.id_curso.pk }}" style="display:none">
                         <h4 class="d-inline-block mt-1">Tus Notas</h4>
-                        <h5 class="float-right mb-0 mt-2 text-muted" id="currentCurso">{{ curso.id_curso.codigo }}, {{ curso.id_curso.anho }}-{{ curso.id_curso.semestre }}</h5>
+                        <h5 class="float-right mb-0 mt-2 text-muted" id="currentCurso">{{ curso.id_curso.codigo }}-{{ curso.id_curso.seccion }}, {{ curso.id_curso.anho }}-{{ curso.id_curso.semestre }}</h5>
 
                         <div class="table-wrap table-responsive my-1"> <!-- "Envoltura" de la tabla -->
                             <table class="table table-notas-perfil table-striped table-hover mb-0"> <!-- Tabla -->

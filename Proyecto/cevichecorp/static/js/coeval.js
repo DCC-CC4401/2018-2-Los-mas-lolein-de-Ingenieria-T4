@@ -48,7 +48,13 @@ function showNotas(curso_pk) {
     document.getElementById("cambiar-contrasena").style.display = "none";
     document.getElementById("notas-resumen-"+curso_pk).style.display = "block";
     document.getElementById("notas-placeholder").style.display = "none";
-    document.getElementById("row-btn").classList.add("active");
+
+    var y = document.querySelectorAll('[id^="row-btn-"]');
+    var j;
+    for(j=0; j<y.length; j++){
+        y[j].classList.remove("active");
+    }
+    document.getElementById("row-btn-"+curso_pk).classList.add("active");
     var changePass = document.getElementById("change-pass-btn");
     if (changePass !== null) changePass.classList.remove("active");
 }
