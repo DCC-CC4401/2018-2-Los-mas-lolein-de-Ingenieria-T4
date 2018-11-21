@@ -15,9 +15,18 @@ def index(request):
         cursosusuario= PerteneceACurso.objects.filter(rut=usuarioactual)
         listaids=list()
         for curso in cursosusuario:
-             listaids.append (AlumnoTieneCoevaluacion.objects.get(id_curso= curso).pk)
+            if AlumnoTieneCoevaluacion.objects.filter(id_curso=curso).exists():
+                coevs = AlumnoTieneCoevaluacion.objects.filter(id_curso= curso)
+                for coev in coevs:
+                    listaids.append (coev.pk)
         coevaluaciones = AlumnoTieneCoevaluacion.objects.filter(pk__in=listaids )
-        return render(request, 'home-vista-alumno.html',{'coev': coevaluaciones,'cursos':cursosusuario,'usuario': nombre})
+
+        dic = {
+            'coev': coevaluaciones,
+            'cursos':cursosusuario,
+            'usuario': nombre
+        }
+        return render(request, 'home-vista-alumno.html', dic)
 
     else:
         #si el usuario esta iniciando sesion / respondió el formulario
@@ -50,7 +59,8 @@ def perfil(request):
         listaids = list()
         # Hay un bug cuando no hay coevaluaciones existentes para un curso
         for curso in cursos_usuario:
-            listaids.append(AlumnoTieneCoevaluacion.objects.get(id_curso=curso).pk)
+            if AlumnoTieneCoevaluacion.objects.filter(id_curso=curso).exists():
+                listaids.append(AlumnoTieneCoevaluacion.objects.get(id_curso=curso).pk)
         coevaluaciones = AlumnoTieneCoevaluacion.objects.filter(pk__in=listaids)
         dicti = {
             'usuario':nombre,
@@ -91,7 +101,8 @@ def coevaluacion(request):
     if request.user.is_authenticated:
         usuario=request.user.get_full_name
         id= request.GET.get('coev')
-        coev= AlumnoTieneCoevaluacion.objects.get(pk=int(id))
+        if id is not None:
+            coev= AlumnoTieneCoevaluacion.objects.get(pk=int(id))
         equipo= Equipos.objects.get(rut_alumno=request.user,actual=True)
         nombre=equipo.nombre
         mates=Equipos.objects.exclude(rut_alumno=request.user).filter(nombre=nombre, actual=True)
