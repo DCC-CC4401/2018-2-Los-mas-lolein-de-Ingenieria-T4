@@ -57,11 +57,12 @@ def perfil(request):
         mail= usuarioactual.email
         cursos_usuario = PerteneceACurso.objects.filter(rut=usuarioactual)
         listaids = list()
-        # Hay un bug cuando no hay coevaluaciones existentes para un curso
         for curso in cursos_usuario:
             if AlumnoTieneCoevaluacion.objects.filter(id_curso=curso).exists():
-                listaids.append(AlumnoTieneCoevaluacion.objects.get(id_curso=curso).pk)
-        coevaluaciones = AlumnoTieneCoevaluacion.objects.filter(pk__in=listaids)
+                coevs = AlumnoTieneCoevaluacion.objects.filter(id_curso= curso)
+                for coev in coevs:
+                    listaids.append (coev.pk)
+        coevaluaciones = AlumnoTieneCoevaluacion.objects.filter(pk__in=listaids )
         dicti = {
             'usuario':nombre,
             'rut': usuarioactual,
@@ -101,6 +102,7 @@ def coevaluacion(request):
     if request.user.is_authenticated:
         usuario=request.user.get_full_name
         id= request.GET.get('coev')
+        coev = None
         if id is not None:
             coev= AlumnoTieneCoevaluacion.objects.get(pk=int(id))
         equipo= Equipos.objects.get(rut_alumno=request.user,actual=True)
