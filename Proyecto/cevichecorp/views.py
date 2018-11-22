@@ -118,3 +118,36 @@ def coevaluacion(request):
 
     else:
         return render(request, 'login.html', {'mensaje': 'Debe iniciar sesión para ingresar.'})
+
+def curso(request, id_curso):
+    if request.user.is_authenticated:
+        curso = PerteneceACurso.objects.get(pk=id_curso)
+        rut = curso.rut
+        usuario = request.user.get_full_name
+        nombre_curso = curso.id_curso.nombre
+        codigo_curso = curso.id_curso.codigo
+        seccion_curso = curso.id_curso.seccion
+        anho_curso = curso.id_curso.anho
+        semestre_curso = curso.id_curso.semestre
+        rol = curso.rol
+        listaids = list()
+        if AlumnoTieneCoevaluacion.objects.filter(id_curso=curso).exists():
+            coevs = AlumnoTieneCoevaluacion.objects.filter(id_curso=curso)
+            for coev in coevs:
+                listaids.append(coev.pk)
+        coevaluaciones = AlumnoTieneCoevaluacion.objects.filter(pk__in=listaids)
+        dict = {
+            'nombre': nombre_curso,
+            'codigo': codigo_curso,
+            'seccion': seccion_curso,
+            'anho': anho_curso,
+            'semestre': semestre_curso,
+            'rol': rol,
+            'rut': rut,
+            'coevs':coevaluaciones,
+            'usuario': usuario
+        }
+        return render(request, 'curso-vista-alumno.html', dict)
+
+    else:
+        return render(request, 'login.html', {'mensaje': 'Debe iniciar sesión para ingresar.'})

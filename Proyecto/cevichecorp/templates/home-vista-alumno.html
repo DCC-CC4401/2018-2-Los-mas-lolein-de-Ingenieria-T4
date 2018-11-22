@@ -149,7 +149,14 @@
                             <!-- Cuerpo de tabla (Table Data) -->
                             <tbody>
                                 {% for c in cursos %}
-                                <tr>
+                                <tr class="cursos" data-href="{% url "curso" c.pk %}">
+
+                                <script> jQuery(document).ready(function($) {
+                                    $(".cursos").click(function() {
+                                        window.location = $(this).data("href");
+                                    });
+                                });
+                                </script>
                                     <td class="td-curso-full">
                                         <div class="cargos cargos-{{c.rol}} tooltip-custom">
                                             <span class="tooltiptext"></span>

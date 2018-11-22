@@ -13,7 +13,7 @@
     <body>
         <!-- Barra superior -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 py-3">
-            <a class="navbar-brand" href="#">Sistema de Coevaluaciones DCC</a>
+            <a class="navbar-brand" href="/">Sistema de Coevaluaciones DCC</a>
             <!-- Al achicar la pantalla, el menú se oculta y se vuelve desplegable mediante este botón. -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon">
@@ -26,11 +26,11 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="divider-vertical"></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Juanito Pérez</a>
+                        <a class="nav-link" href="../perfil">{{ usuario }}</a>
                     </li>
                     <li class="divider-vertical"></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Cerrar Sesión</a>
+                        <a class="nav-link" href="../out">Cerrar Sesión</a>
                     </li>
                 </ul>
             </div>
@@ -43,7 +43,15 @@
             <h3 class="d-inline-block page-title">Ficha de Curso</h3>
             <h5 class="mb-3">
                 <div class="cargos cargos-alumno"></div>
-                CC4401-1 Ingeniería de Software 2018, Primavera
+                {{ codigo }}-{{ seccion }} {{ nombre }} {{ anho }},
+                {% if semestre == 1 %}
+                    Otoño
+                {% elif semestre == 2 %}
+                    Primavera
+                {% else %}
+                    Verano
+                {% endif %}
+
             </h5>
             <hr/>
             <!-- Tablas de resumen -->
@@ -67,53 +75,42 @@
 
                             <!-- Cuerpo de tabla (Table Data) -->
                             <tbody>
-                                <tr class="tr-pendiente"> <!-- Fila destacada como Pendiente -->
+                                {% for coev in coevs %}
+                                <tr class="tr-{{ c.contestada|yesno:"no,pendiente"}}"> <!-- Fila destacada como Pendiente -->
                                     <!-- Fecha de inicio -->
                                     <td class="td-fecha">
-                                        20:01 01/12/18
+                                        {{c.id_coev.fecha_inicio|time:"H:i"  }} {{c.id_coev.fecha_inicio|date:"d/m/y" }}
                                     </td>
                                     <!-- Título de coevaluación -->
-                                    <td>Tarea final</td>
+                                    <td>{{c.id_coev.nombre}}</td>
                                     <!-- Fecha de término -->
                                     <td class="td-fecha">
-                                        23:59 20/12/18
+                                        {{c.id_coev.fecha_termino|time:"H:i"  }} {{c.id_coev.fecha_termino|date:"d/m/y" }}
                                     </td>
                                     <!-- Estado -->
-                                    <td>Pendiente</td>
+                                    <td>{% if c.id_coev.status == 1 %} <!--abierta -->
+                                            {% if c.contestada %}
+                                                Contestada
+                                            {% else %}
+                                                Pendiente
+                                            {% endif %}
+
+                                        {%  elif c.id_coev.status == 2 %} <!--cerrada -->
+                                             Cerrada
+
+                                         {%  elif c.id_coev.status == 3 %} <!--Publicada -->
+                                             Publicada
+                                        {% endif %}
+
+
+                                       </td>
                                     <!-- Ícono de acción (responder) -->
                                     <td class="td-icon">
                                         <a href="#" title="Responder coevaluación"><img class="clickable-icon answer-icon wiggle" src="../static/icon/answer-icon.png" alt="Responder coevaluación" width="28" height="28"></a>
                                     </td>
                                 </tr>
-                                <tr class="tr-pendiente">
-                                    <td class="td-fecha">
-                                        12:03 11/11/18
-                                    </td>
-                                    <td>Tarea con nombre muy largo que ocupa todo el espacio</td>
-                                    <td class="td-fecha">
-                                        23:59 21/11/18
-                                    </td>
-                                    <td>Pendiente</td>
-                                    <td class="td-icon">
-                                        <a href="#" title="Responder coevaluación"><img class="clickable-icon answer-icon wiggle" src="../static/icon/answer-icon.png" alt="Responder coevaluación" width="28" height="28"></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="td-fecha">15:15 10/11/18</td>
-                                    <td>Tarea 2</td>
-                                    <td class="td-fecha">23:59 19/11/18</td>
-                                    <td>Cerrada</td>
-                                    <td class="td-icon">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="td-fecha">03:53 20/10/18</td>
-                                    <td>Tarea 1</td>
-                                    <td class="td-fecha">23:59 27/10/18</td>
-                                    <td>Publicada</td>
-                                    <td class="td-icon">
-                                    </td>
-                                </tr>
+
+                                {% endfor %}
                             </tbody>
                         </table>
                     </div>
