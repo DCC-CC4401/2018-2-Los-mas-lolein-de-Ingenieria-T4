@@ -13,13 +13,15 @@ def index(request):
         usuarioactual = request.user
         nombre= request.user.get_full_name()
         cursosusuario= PerteneceACurso.objects.filter(rut=usuarioactual)
+        cursosusuario = sorted(cursosusuario, reverse=True, key=getKeyCursos)
         listaids=list()
         for curso in cursosusuario:
             if AlumnoTieneCoevaluacion.objects.filter(id_curso=curso).exists():
                 coevs = AlumnoTieneCoevaluacion.objects.filter(id_curso= curso)
                 for coev in coevs:
-                    listaids.append (coev.pk)
+                    listaids.append(coev.pk)
         coevaluaciones = AlumnoTieneCoevaluacion.objects.filter(pk__in=listaids )
+        coevaluaciones = sorted(coevaluaciones, reverse=True, key=getKeyCoevs)
 
         dic = {
             'coev': coevaluaciones,
@@ -50,12 +52,19 @@ def out(request):
     logout(request)
     return HttpResponseRedirect("/")
 
+def getKeyCursos(elem):
+    return [elem.id_curso.anho, elem.id_curso.semestre]
+
+def getKeyCoevs(elem):
+    return elem.id_coev.fecha_inicio
+
 def perfil(request):
     if request.user.is_authenticated:
         usuarioactual = request.user
         nombre = request.user.get_full_name()
         mail= usuarioactual.email
         cursos_usuario = PerteneceACurso.objects.filter(rut=usuarioactual)
+        cursos_usuario = sorted(cursos_usuario, reverse=True, key=getKeyCursos)
         listaids = list()
         for curso in cursos_usuario:
             if AlumnoTieneCoevaluacion.objects.filter(id_curso=curso).exists():
@@ -63,6 +72,7 @@ def perfil(request):
                 for coev in coevs:
                     listaids.append (coev.pk)
         coevaluaciones = AlumnoTieneCoevaluacion.objects.filter(pk__in=listaids )
+        coevaluaciones = sorted(coevaluaciones, reverse=True, key=getKeyCoevs)
         dicti = {
             'usuario':nombre,
             'rut': usuarioactual,

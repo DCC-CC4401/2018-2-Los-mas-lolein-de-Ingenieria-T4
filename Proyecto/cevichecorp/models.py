@@ -13,10 +13,22 @@ class Curso(models.Model):
     class Meta:
         unique_together = (('codigo','seccion','anho','semestre'))
 
+EST = "ESTUDIANTE"
+PROF = "PROFESOR"
+AUX = "PROFESOR AUXILIAR"
+AYUD = "AYUDANTE"
+
+ROL_CHOICES = (
+    (EST, "Estudiante"),
+    (PROF, "Profesor"),
+    (AUX, "Profesor auxiliar"),
+    (AYUD, "Ayudante"),
+)
+
 class PerteneceACurso(models.Model):
     rut = models.ForeignKey(User, on_delete=models.CASCADE, null=False, blank=False)
     id_curso = models.ForeignKey(Curso, on_delete=models.CASCADE, null=False, blank=False)
-    rol = models.CharField(max_length=20)
+    rol = models.CharField(max_length=20, choices=ROL_CHOICES)
     class Meta:
         unique_together = (('rut','id_curso'))
 
