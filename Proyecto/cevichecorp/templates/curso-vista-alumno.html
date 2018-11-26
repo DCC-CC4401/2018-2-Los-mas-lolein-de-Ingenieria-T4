@@ -224,7 +224,7 @@
 
                             <!-- Cuerpo de tabla (Table Data) -->
                             <tbody>
-
+                                    {{ coevaluaciones }}
                                     <!-- Nombre almuno -->
 
                                     {% for  equipo in equipos %}
@@ -234,13 +234,18 @@
                                         {{ equipo.rut_alumno.get_full_name}}
                                         </td>
                                          <!-- Notas -->
+
+                                        <td>
+
                                         {% for coev in coevaluaciones %}
-                                            <td>
-                                            {% if coev.id_curso.id_curso=curso and coev.id_curso.%}
+                                                                {{  curso}}
+                                            {{ coev.id_curso}}
+                                            {% if coev.id_curso.id_curso == curso and coev.id_curso.rut == equipo.rut_alumno %}
                                                 {{ coev.notapromedio}}
                                             {% endif %}
-                                            </td>
                                         {% endfor %}
+                                            </td>
+
                                          </tr>
                                     {% endif %}
                                     {% endfor %}
