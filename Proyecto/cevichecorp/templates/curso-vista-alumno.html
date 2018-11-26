@@ -37,6 +37,7 @@
         </nav>
         <!-- FIN Barra superior -->
 
+        {% if rol == 'alumno' %}
         <!-- Cuerpo -->
         <div class="container"> <!-- Contenedor responsivo de Bootstrap, se adapta a la pantalla usando columnas. -->
 
@@ -75,7 +76,7 @@
 
                             <!-- Cuerpo de tabla (Table Data) -->
                             <tbody>
-                                {% for coev in coevs %}
+                                {% for c in coevs %}
                                 <tr class="tr-{{ c.contestada|yesno:"no,pendiente"}}"> <!-- Fila destacada como Pendiente -->
                                     <!-- Fecha de inicio -->
                                     <td class="td-fecha">
@@ -90,24 +91,22 @@
                                     <!-- Estado -->
                                     <td>{% if c.id_coev.status == 1 %} <!--abierta -->
                                             {% if c.contestada %}
-                                                Contestada
+                                                Contestada</td><td></td>
                                             {% else %}
-                                                Pendiente
+                                                Pendiente</td>
+                                                 <td class="td-icon">
+                                        <a href="#" title="Responder coevaluación"><img class="clickable-icon answer-icon wiggle" src="../static/icon/answer-icon.png" alt="Responder coevaluación" width="28" height="28"></a>
+                                    </td>
                                             {% endif %}
 
                                         {%  elif c.id_coev.status == 2 %} <!--cerrada -->
-                                             Cerrada
+                                             Cerrada</td>
+<td></td>
 
                                          {%  elif c.id_coev.status == 3 %} <!--Publicada -->
-                                             Publicada
+                                             Publicada</td>
+                                        <td></td>
                                         {% endif %}
-
-
-                                       </td>
-                                    <!-- Ícono de acción (responder) -->
-                                    <td class="td-icon">
-                                        <a href="#" title="Responder coevaluación"><img class="clickable-icon answer-icon wiggle" src="../static/icon/answer-icon.png" alt="Responder coevaluación" width="28" height="28"></a>
-                                    </td>
                                 </tr>
 
                                 {% endfor %}
@@ -118,6 +117,152 @@
             </div>
 
         </div>
+        {% else %}
+
+        <!-- Cuerpo -->
+        <div class="container"> <!-- Contenedor responsivo de Bootstrap, se adapta a la pantalla usando columnas. -->
+
+            <h3 class="d-inline-block page-title">Ficha de Curso</h3>
+            <h5 class="mb-3">
+                <div class="cargos cargos-{{ rol }}"></div>
+                {{ codigo }}-{{ seccion }} {{ nombre }} {{ anho }},
+                {% if semestre == 1 %}
+                    Otoño
+                {% elif semestre == 2 %}
+                    Primavera
+                {% else %}
+                    Verano
+                {% endif %}
+            </h5>
+            <hr/>
+            <!-- Tablas de resumen -->
+            <div class="row">
+                <!-- Tabla de coevaluaciones -->
+                <div class="col-md-10 offset-1 mb-5">
+            		<h4 class="d-inline-block mt-1">Coevaluaciones del curso</h4>
+                    <button type="button" id="add-coev-btn" class="btn btn-primary-custom float-right">Agregar coevaluación</button>
+
+                    <div class="table-wrap table-responsive my-1"> <!-- "Envoltura" de la tabla -->
+                        <table class="table table-coeval-curso table-striped table-hover mb-0"> <!-- Tabla -->
+                            <!-- Encabezados de tabla (Table Headers) -->
+                            <thead class="thead-light">
+                                <tr> <!-- Fila (Table Row) -->
+                                    <th class="th-fecha">Fecha inicio</th>
+                                    <th class="th-titulo">Nombre</th>
+                                    <th class="th-fecha">Fecha límite</th>
+                                    <th class="th-estado">Estado</th>
+                                    <th class="th-iconos"></th>
+                                </tr>
+                            </thead>
+
+                            <!-- Cuerpo de tabla (Table Data) -->
+                            <tbody>
+                                {% for c in coevs %}
+                                <tr class="tr-{{ c.contestada|yesno:"no,pendiente"}}"> <!-- Fila destacada como Pendiente -->
+                                    <!-- Fecha de inicio -->
+                                    <td class="td-fecha">
+                                        {{c.fecha_inicio|time:"H:i"  }} {{c.fecha_inicio|date:"d/m/y" }}
+                                    </td>
+                                    <!-- Título de coevaluación -->
+                                    <td>{{c.nombre}}</td>
+                                    <!-- Fecha de término -->
+                                    <td class="td-fecha">
+                                        {{c.fecha_termino|time:"H:i"  }} {{c.fecha_termino|date:"d/m/y" }}
+                                    </td>
+                                    <!-- Estado -->
+                                    {% if c.status == 1 %} <!--abierta -->
+                                          <td>Abierta
+                                                                                </td>
+<td></td>
+                                        {%  elif c.status == 2 %} <!--cerrada -->
+                                           <td>  Cerrada
+                                                                                </td>
+                                    <td class="td-icon">
+                                        <a href="#" title="Publicar resultados"><img class="clickable-icon publish-icon wiggle" src="../static/icon/publish-icon.png" alt="Publicar resultados" width="28" height="28"></a>
+                                    </td>
+                                         {%  elif c.status == 3 %} <!--Publicada -->
+                                           <td>  Publicada
+                                        </td><td class="td-icon">
+                                         <a href="#" title="Exportar resultados"><img class="clickable-icon export-icon" src="../static/icon/export-icon.png" alt="Exportar resultados" width="28" height="28"></a>
+                                         </td>{% endif %}</tr>
+                                {% endfor %}
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            	<!-- FIN Tabla de coevaluaciones -->
+            </div>
+            <!-- FIN Tablas de resumen -->
+
+            <!-- Gestión del curso -->
+			<h4 class="d-inline-block mt-1 mb-0">Gestión del Curso</h4>
+			<div class="d-inline-block ml-2">
+            	<a href="#" class="small" title="Cargar información desde archivo"><img class="clickable-icon export-icon mb-1" src="../static/icon/load-data-icon.png" alt="Cargar información desde archivo" width="20" height="20">Cargar archivo...</a>
+            </div>
+			<hr/>
+ <div class="row">
+      {% for nombre in nombre_equipo %}
+
+
+
+              <!-- Tabla de coevaluaciones -->
+                <div class="col-md-6 offset-1 mb-5">
+
+                    <div class="table-wrap table-responsive my-1"> <!-- "Envoltura" de la tabla -->
+                        <table class="table table-coeval-curso table-striped table-hover mb-0"> <!-- Tabla -->
+                            <!-- Encabezados de tabla (Table Headers) -->
+                            <thead class="thead-light">
+                                <tr> <!-- Fila (Table Row) -->
+                                    <th class="th-fecha">{{ nombre}}</th>
+                                    {% for coev in coevs %}
+                                    <th class="th-fecha">{{ coev.nombre }}</th>
+                                    {% endfor %}
+                                </tr>
+                            </thead>
+
+                            <!-- Cuerpo de tabla (Table Data) -->
+                            <tbody>
+
+                                    <!-- Nombre almuno -->
+
+                                    {% for  equipo in equipos %}
+                                    {% if equipo.nombre == nombre and equipo.actual == True %}
+                                        <tr>
+                                        <td class="td-fecha">
+                                        {{ equipo.rut_alumno.get_full_name}}
+                                        </td>
+                                         <!-- Notas -->
+                                        {% for coev in coevaluaciones %}
+                                            <td>
+                                            {% if coev.id_curso.id_curso=curso and coev.id_curso.%}
+                                                {{ coev.notapromedio}}
+                                            {% endif %}
+                                            </td>
+                                        {% endfor %}
+                                         </tr>
+                                    {% endif %}
+                                    {% endfor %}
+
+
+                                {{ curso }}
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+                {% endfor %}
+                    <!-- FIN Gestión de grupo -->
+                </div>
+                <!-- FIN Sección de control -->
+            </div>
+
+        </div>
+
+        {% endif %}
             
     </body>
     </html>

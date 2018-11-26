@@ -22,6 +22,7 @@ def index(request):
                     listaids.append(coev.pk)
         coevaluaciones = AlumnoTieneCoevaluacion.objects.filter(pk__in=listaids )
         coevaluaciones = sorted(coevaluaciones, reverse=True, key=getKeyCoevs)
+        coevaluaciones=coevaluaciones[:10]
 
         dic = {
             'coev': coevaluaciones,
@@ -140,24 +141,51 @@ def curso(request, id_curso):
         anho_curso = curso.id_curso.anho
         semestre_curso = curso.id_curso.semestre
         rol = curso.rol
-        listaids = list()
-        if AlumnoTieneCoevaluacion.objects.filter(id_curso=curso).exists():
-            coevs = AlumnoTieneCoevaluacion.objects.filter(id_curso=curso)
-            for coev in coevs:
-                listaids.append(coev.pk)
-        coevaluaciones = AlumnoTieneCoevaluacion.objects.filter(pk__in=listaids)
-        dict = {
-            'nombre': nombre_curso,
-            'codigo': codigo_curso,
-            'seccion': seccion_curso,
-            'anho': anho_curso,
-            'semestre': semestre_curso,
-            'rol': rol,
-            'rut': rut,
-            'coevs':coevaluaciones,
-            'usuario': usuario
-        }
-        return render(request, 'curso-vista-alumno.html', dict)
+
+        if rol== 'alumno':
+            listaids = list()
+            if AlumnoTieneCoevaluacion.objects.filter(id_curso=curso).exists():
+                coevs = AlumnoTieneCoevaluacion.objects.filter(id_curso=curso)
+                for coev in coevs:
+                    listaids.append(coev.pk)
+            coevaluaciones = AlumnoTieneCoevaluacion.objects.filter(pk__in=listaids)
+            dict = {
+                'nombre': nombre_curso,
+                'codigo': codigo_curso,
+                'seccion': seccion_curso,
+                'anho': anho_curso,
+                'semestre': semestre_curso,
+                'rol': rol,
+                'rut': rut,
+                'coevs': coevaluaciones,
+                'usuario': usuario
+            }
+            return render(request, 'curso-vista-alumno.html', dict)
+        else :
+            coevaluaciones=AlumnoTieneCoevaluacion.objects.all()
+            coevs=Coevaluacion.objects.filter(id_curso=curso.id_curso)
+            equipos= Equipos.objects.filter(id_curso=curso.id_curso)
+            listaids2=list()
+            for equipo in equipos:
+                if  equipo.nombre not in listaids2:
+                    listaids2.append(equipo.nombre)
+
+            dict = {
+                'curso':curso.id_curso,
+                'nombre': nombre_curso,
+                'codigo': codigo_curso,
+                'seccion': seccion_curso,
+                'anho': anho_curso,
+                'semestre': semestre_curso,
+                'rol': rol,
+                'rut': rut,
+                'coevs': coevs,
+                'usuario': usuario,
+                'equipos':equipos,
+                'nombre_equipo':listaids2,
+                'coevaluaciones': coevaluaciones
+            }
+            return render(request, 'curso-vista-alumno.html', dict)
 
     else:
         return render(request, 'login.html', {'mensaje': 'Debe iniciar sesión para ingresar.'})

@@ -13,10 +13,10 @@ class Curso(models.Model):
     class Meta:
         unique_together = (('codigo','seccion','anho','semestre'))
 
-EST = "ESTUDIANTE"
-PROF = "PROFESOR"
-AUX = "PROFESOR AUXILIAR"
-AYUD = "AYUDANTE"
+EST = "alumno"
+PROF = "profesor"
+AUX = "auxiliar"
+AYUD = "ayudante"
 
 ROL_CHOICES = (
     (EST, "Estudiante"),
