@@ -131,6 +131,8 @@ def coevaluacion(request):
         return render(request, 'login.html', {'mensaje': 'Debe iniciar sesión para ingresar.'})
 
 def curso(request, id_curso):
+    #if request.method == 'POST':
+        #new_coevaluacion= Coevaluacion(nombre=request.POST[''] ,id_curso=,fecha_inicio=,fecha_termino=, estatus='0')
     if request.user.is_authenticated:
         curso = PerteneceACurso.objects.get(pk=id_curso)
         rut = curso.rut
