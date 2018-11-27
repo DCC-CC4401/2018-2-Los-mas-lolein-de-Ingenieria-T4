@@ -77,7 +77,13 @@
                             <!-- Cuerpo de tabla (Table Data) -->
                             <tbody>
                                 {% for c in coevs %}
-                                <tr class="tr-{{ c.contestada|yesno:"no,pendiente"}}"> <!-- Fila destacada como Pendiente -->
+
+                                {%  if c.id_coev.status == 1 %}
+                                <tr class="tr-{{ c.contestada|yesno:"no,pendiente"}}">
+                                    {% else %}
+                                    <tr class="tr-no"> <!-- Fila destacada como Pendiente -->
+                                    {% endif %}
+
                                     <!-- Fecha de inicio -->
                                     <td class="td-fecha">
                                         {{c.id_coev.fecha_inicio|time:"H:i"  }} {{c.id_coev.fecha_inicio|date:"d/m/y" }}
@@ -95,7 +101,7 @@
                                             {% else %}
                                                 Pendiente</td>
                                                  <td class="td-icon">
-                                        <a href="#" title="Responder coevaluación"><img class="clickable-icon answer-icon wiggle" src="../static/icon/answer-icon.png" alt="Responder coevaluación" width="28" height="28"></a>
+                                        <a href="/coevaluacion?coev={{c.pk|urlencode }}" title="Responder coevaluación"><img class="clickable-icon answer-icon wiggle" src="../static/icon/answer-icon.png" alt="Responder coevaluación" width="28" height="28"></a>
                                     </td>
                                             {% endif %}
 
@@ -160,6 +166,7 @@
                             </thead>
 
                             <!-- Cuerpo de tabla (Table Data) -->
+
                             <tbody>
                                 {% for c in coevs %}
                                 <tr class="tr-{{ c.contestada|yesno:"no,pendiente"}}"> <!-- Fila destacada como Pendiente -->
