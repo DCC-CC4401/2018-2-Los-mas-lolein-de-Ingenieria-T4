@@ -212,7 +212,7 @@
 
 
               <!-- Tabla de coevaluaciones -->
-                <div class="col-md-6 offset-1 mb-5">
+                <div class="col-md-5 offset-1 mb-3">
 
                     <div class="table-wrap table-responsive my-1"> <!-- "Envoltura" de la tabla -->
                         <table class="table table-coeval-curso table-striped table-hover mb-0"> <!-- Tabla -->
@@ -221,14 +221,14 @@
                                 <tr> <!-- Fila (Table Row) -->
                                     <th class="th-fecha">{{ nombre}}</th>
                                     {% for coev in coevs %}
-                                    <th class="th-fecha">{{ coev.nombre }}</th>
+                                    <th class="th-estado">{{ coev.nombre }}</th>
                                     {% endfor %}
                                 </tr>
                             </thead>
 
                             <!-- Cuerpo de tabla (Table Data) -->
                             <tbody>
-                                    {{ coevaluaciones }}
+
                                     <!-- Nombre almuno -->
 
                                     {% for  equipo in equipos %}
@@ -239,37 +239,49 @@
                                         </td>
                                          <!-- Notas -->
 
-                                        <td>
+
 
                                         {% for coev in coevaluaciones %}
-                                                                {{  curso}}
-                                            {{ coev.id_curso}}
-                                            {% if coev.id_curso.id_curso == curso and coev.id_curso.rut == equipo.rut_alumno %}
-                                                {{ coev.notapromedio}}
+                                             <td>
+                                            {% if coev.id_curso.rut == equipo.rut_alumno and coev.id_curso.id_curso == curso %}
+                                                 {% for c in coevs %}
+                                                     {%  if  c == coev.id_coev  %}
+                                                         {{ coev.notapromedio }}
+                                                     {% endif %}
+                                                    {% endfor %}
+                                             {% else %}
+                                              -
+
                                             {% endif %}
+
+                                             </td>
+
+
+
+
                                         {% endfor %}
-                                            </td>
+
 
                                          </tr>
                                     {% endif %}
                                     {% endfor %}
 
 
-                                {{ curso }}
-
+                            
                             </tbody>
                         </table>
 
                     </div>
 
                 </div>
-                {% endfor %}
-                    <!-- FIN Gestión de grupo -->
-                </div>
+  {% endfor %}
+          </div>
+
                 <!-- FIN Sección de control -->
             </div>
 
-        </div>
+
+
 
         {% endif %}
             

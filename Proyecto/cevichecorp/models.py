@@ -64,6 +64,7 @@ class RespuestasAlumnos(models.Model):
     rut_objetivo = models.ForeignKey(User, on_delete=models.CASCADE, related_name="para")
     respuesta = models.CharField(max_length=150)
     nota = models.FloatField()
+
     class Meta:
         unique_together = (('id_pregunta','rut_desde','rut_objetivo'))
 
