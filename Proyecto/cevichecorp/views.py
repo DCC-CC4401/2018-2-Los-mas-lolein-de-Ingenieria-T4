@@ -110,7 +110,17 @@ def cambioContrasena(request):
 
 
 def coevaluacion(request):
-    if request.user.is_authenticated:
+     if request.user.is_authenticated:
+        respuestas=None
+        mensaje = ""
+        if request.method == 'POST':
+             estudiante = User.objects.get(username=request.POST['estudiante'])
+             pregunta = Preguntas.objects.get()
+             new_preguntas = RespuestasAlumnos(id_pregunta=pregunta, rut_desde=request.user, rut_objetivo=estudiante,
+                                               respuesta="blahblah", nota=1.0)
+             new_preguntas.save()
+             mensaje = "Se ha envidado tu coevaluacioń"
+             respuestas = RespuestasAlumnos.objects.all()
         usuario=request.user.get_full_name
         id= request.GET.get('coev')
         coev = None
@@ -123,11 +133,8 @@ def coevaluacion(request):
             correspondiente=User.objects.get(username=request.GET.get('alumno'))
         else :
             correspondiente=None
-
-        return render(request, 'coevaluacion-vista-alumno.html',{'usuario':usuario,'coev':coev,'mates':mates,'correspondiente':correspondiente,'id':id})
-
-
-    else:
+        return render(request, 'coevaluacion-vista-alumno.html',{'usuario':usuario,'coev':coev,'mates':mates,'correspondiente':correspondiente,'id':id,'mensaje':mensaje,'res':respuestas})
+     else:
         return render(request, 'login.html', {'mensaje': 'Debe iniciar sesión para ingresar.'})
 
 def curso(request, id_curso):

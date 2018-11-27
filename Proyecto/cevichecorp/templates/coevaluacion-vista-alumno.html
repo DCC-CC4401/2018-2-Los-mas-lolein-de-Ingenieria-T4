@@ -14,6 +14,7 @@
         <!-- Barra superior -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 py-3">
             <a class="navbar-brand" href="../">Sistema de Coevaluaciones DCC</a>
+
             <!-- Al achicar la pantalla, el menú se oculta y se vuelve desplegable mediante este botón. -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon">
@@ -40,7 +41,7 @@
         <!-- Cuerpo -->
         <div class="container"> <!-- Contenedor responsivo, se adapta a la pantalla con puntos de quiebre. -->
 
-            <h3 class="d-inline-block page-title">Ficha de Coevaluación</h3>
+            <h3 class="d-inline-block page-title">Ficha de Coevaluación  </h3>{{mensaje}}
             <hr/>
             <!-- Contenido -->
             <div class="row mb-3">
@@ -83,11 +84,10 @@
 </span>
                 </div>
                 <!-- FIN Información -->
-
                 <!-- Tabla de alumnos que no han contestado -->
                 <div class="col-md-6">
                     <h4 class="d-inline-block mt-1">Tu grupo</h4>
-
+                    {{ res }}
                     <div class="table-wrap table-responsive my-1">
                         <table class="table table-grupo-coeval table-striped table-hover mb-0">
                             <thead class="thead-light">
@@ -98,17 +98,12 @@
                             </thead>
                             <tbody>
                                 {% for alumno in mates %}
-
-
                                 <tr class="tr-pendiente" onclick="jumpTo('responder-coeval')">
                                     <td>{{  alumno.rut_alumno.get_full_name }}</td>
                                     <td class="td-icon"><a href="/coevaluacion?coev={{id|urlencode }}&alumno={{alumno.rut_alumno|urlencode }}" title="Responder coevaluación"><img class="clickable-icon answer-icon wiggle" src="../static/icon/answer-icon.png" alt="Responder coevaluación" width="28" height="28"></a></td>
                                 </tr>
                                 {% endfor %}
-                                <tr>
-                                    <td>Estudiante 3</td>
-                                    <td class="td-icon"></td>
-                                </tr>
+
                             </tbody>
                         </table>
                     </div>
@@ -124,8 +119,13 @@
                 <div class="col-10 offset-1">
                 <h5 class="font-italic d-inline-block">Estas respondiendo para: {{ correspondiente.get_full_name }}</h5>
                 <h4 class="font-weight-bold d-inline-block ml-1"></h4>
-                    <form action="/coevaluacion?coev={{id|urlencode }}">
+                    <form action="/coevaluacion?coev={{id|urlencode }}" method="post">
                         <ol>
+                            {% csrf_token %}
+                            <input type="hidden" name="estudiante" value={{correspondiente}}>
+                            <input type="hidden" name="coevaluacion" value={{id|urlencode }}>
+
+
                             <div class="criterio-coeval">
                                 <li class="h5">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
