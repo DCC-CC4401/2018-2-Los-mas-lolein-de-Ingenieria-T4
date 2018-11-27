@@ -65,8 +65,11 @@
                             <!-- Aquí empieza el for -->
                             {% for c in coev %}
 
-
-                                <tr class="tr-{{ c.contestada|yesno:"no,pendiente"}}"> <!-- Fila destacada como Pendiente -->
+                                {%  if c.id_coev.status == 1 %}
+                                <tr class="tr-{{ c.contestada|yesno:"no,pendiente"}}">
+                                    {% else %}
+                                    <tr class="tr-no"> <!-- Fila destacada como Pendiente -->
+                                    {% endif %}
                                     <!-- Fecha de inicio -->
                                     <td class="td-fecha">
                                        {{c.id_coev.fecha_inicio|time:"H:i"  }} {{c.id_coev.fecha_inicio|date:"d/m/y" }}
@@ -98,10 +101,10 @@
                                             {% endif %}
 
                                         {%  elif c.id_coev.status == 2 %} <!--cerrada -->
-                                             Cerrada
+                                        Cerrada <td></td>
 
                                          {%  elif c.id_coev.status == 3 %} <!--Publicada -->
-                                            Publicada
+                                            Publicada <td></td>
                                         {% endif %}
 
 
@@ -109,7 +112,7 @@
                                     <!-- Ícono de acción (responder) -->
                                      {% if c.id_coev.status == 1 %} <!--abierta -->
                                             {% if c.contestada %}
-                                                Hecho
+                                                <td >Hecho </td>
                                             {% else %}
 
                                                   <td class="td-icon">
@@ -117,13 +120,13 @@
                                                    <a title="Responder coevaluación" href="/coevaluacion?coev={{c.pk|urlencode }}">
                                                        <img class="clickable-icon answer-icon wiggle" src="../static/icon/answer-icon.png" alt="Responder coevaluación" width="28" height="28">
                                                    </a>
-                                               </td>
+                                                  {% endif %}
 
 
 
 
-                                            {% endif %}
                                         {% endif %}
+                                  </td>
 
                                 </tr>
                             <!--Aquí termina un for-->

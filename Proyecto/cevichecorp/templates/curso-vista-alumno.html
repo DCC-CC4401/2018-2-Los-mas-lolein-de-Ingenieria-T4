@@ -215,7 +215,7 @@
                             <!-- Encabezados de tabla (Table Headers) -->
                             <thead class="thead-light">
                                 <tr> <!-- Fila (Table Row) -->
-                                    <th class="th-fecha">{{ nombre}}</th>
+                                    <th >{{ nombre}}</th>
                                     {% for coev in coevs %}
                                     <th class="th-estado">{{ coev.nombre }}</th>
                                     {% endfor %}
@@ -246,7 +246,7 @@
                                                      {% endif %}
                                                     {% endfor %}
                                              {% else %}
-                                              -
+
 
                                             {% endif %}
 
@@ -263,7 +263,7 @@
                                     {% endfor %}
 
 
-                            
+
                             </tbody>
                         </table>
 

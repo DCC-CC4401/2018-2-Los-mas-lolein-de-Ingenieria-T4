@@ -120,12 +120,14 @@ def coevaluacion(request):
                                                respuesta="blahblah", nota=1.0)
              new_preguntas.save()
              mensaje = "Se ha envidado tu coevaluacioń"
-             respuestas = RespuestasAlumnos.objects.all()
+             respuestas=new_preguntas
+
+
         usuario=request.user.get_full_name
         id= request.GET.get('coev')
         coev = None
         if id is not None:
-            coev= AlumnoTieneCoevaluacion.objects.get(pk=int(id))
+            coev = AlumnoTieneCoevaluacion.objects.get(pk=int(id))
         equipo= Equipos.objects.get(rut_alumno=request.user,actual=True)
         nombre=equipo.nombre
         mates=Equipos.objects.exclude(rut_alumno=request.user).filter(nombre=nombre, actual=True)
