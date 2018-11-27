@@ -200,3 +200,20 @@ def curso(request, id_curso):
 
     else:
         return render(request, 'login.html', {'mensaje': 'Debe iniciar sesión para ingresar.'})
+
+def nuevaCoevaluacion(request,id_curso):
+    curso = Curso.objects.get(pk=id_curso)
+    usuario = request.user.get_full_name
+    dict={'id_curso':curso,'usuario':usuario}
+    return render(request, 'nueva-coevaluacion.html',dict)
+
+def guardarCoevaluacion(request,id_curso):
+
+    nombre_coev = request.POST['nombreCoev']
+    curso_class = Curso.objects.get(pk=id_curso)
+    fechainicio = request.POST['fechainicio']
+    fechatermino = request.POST['fechatermino']
+    status = request.POST['status']
+    coev = Coevaluacion(nombre=nombre_coev, id_curso=curso_class, fecha_inicio=fechainicio, fecha_termino=fechatermino, status=status)
+    coev.save()
+    return curso(request,id_curso)

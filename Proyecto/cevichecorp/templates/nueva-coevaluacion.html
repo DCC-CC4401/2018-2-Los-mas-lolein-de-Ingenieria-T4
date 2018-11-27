@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../static/css/coeval.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="../static/js/bootstrap.min.js"></script>
+        <script src="../static/js/coeval.js"></script>
+        <title>Sistema de Coevaluaciones DCC</title>
+    </head>
+    <body>
+        <!-- Barra superior -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 py-3">
+            <a class="navbar-brand" href="../">Sistema de Coevaluaciones DCC</a>
+            <!-- Al achicar la pantalla, el menú se oculta y se vuelve desplegable mediante este botón. -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fa fa-navicon"></i>
+                </span>
+            </button>
+
+            <!-- Menú superior-derecha -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="divider-vertical"></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../perfil">{{usuario}}</a>
+                    </li>
+                    <li class="divider-vertical"></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../out">Cerrar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- FIN Barra superior -->
+
+        <!-- Cuerpo -->
+        <div class="container"> <!-- Contenedor responsivo, se adapta a la pantalla con puntos de quiebre. -->
+
+            <h3 class="d-inline-block page-title">Nueva Coevaluación</h3>
+            <hr/>
+            <!-- Contenido -->
+            <div class="row">
+
+
+
+
+                <!-- Tabla de notas -->
+                <div class="col-md-5">
+                    <div id="cambiar-contraseasdaa">
+                        <h4 class="d-inline-block mt-1">Crear coevaluación</h4>
+                        <form action="{% url "guardarCoevaluacion" id_curso.pk %}" method="Post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="nombreCoev">Nombre de la Coevaluación</label>
+                                <input class="nombreCoev" id="nombreCoev" name="nombreCoev">
+                            </div>
+                            <div class="static">
+                                <!-- Debiera ser estatico -->
+                                Curso al que pertenece: {{ id_curso.nombre }}
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fechainicio">Fecha Inicio</label>
+                                <input type="date" class="form-control" id="fechainicio" name="fechainicio">
+                            </div>
+                            <div class="form-group">
+                                <label for="fechatermino">Fecha Término</label>
+                                <input type="date" class="form-control" id="fechatermino" name="fechatermino">
+                            </div>
+                            <input type="hidden" id="status" name="status" value="1">
+                            <button type="submit" class="btn btn-primary-custom">Confirmar</button>
+                        </form>
+                        <form action="{% url "curso" id_curso.pk %}">
+                            <button type="submit" class="btn btn-cancel">Cancelar</button>
+                        </form>
+                    </div>
+                    <div id="notas-placeholder" class="mt-5">
+                        <h5 class="font-weight-normal text-center text-muted">Selecciona un curso para ver tus notas</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
