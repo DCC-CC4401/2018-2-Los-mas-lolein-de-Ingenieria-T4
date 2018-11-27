@@ -59,7 +59,7 @@ def getKeyCursos(elem):
 def getKeyCoevs(elem):
     return elem.id_coev.fecha_inicio
 
-def perfil(request):
+def perfil(request, mensaje=""):
     if request.user.is_authenticated:
         usuarioactual = request.user
         nombre = request.user.get_full_name()
@@ -79,7 +79,8 @@ def perfil(request):
             'rut': usuarioactual,
             'mail':mail,
             'cursos': cursos_usuario,
-            'coevs': coevaluaciones
+            'coevs': coevaluaciones,
+            'mensaje': mensaje
             }
         return render(request, "perfil-vista-dueno.html", dicti)
 
@@ -100,11 +101,15 @@ def cambioContrasena(request):
             usuarioactual.save()
             user = authenticate(request, username=usuarioactual, password=new_pass_confirm)
             if user is not None:
-                return render(request, "perfil-vista-dueno.html", {'usuario':nombre,'rut':usuarioactual, 'mail':mail, 'mensaje': 'Se ha actualizado de manera exitosa la contraseña.'})
+                login(request, user)
+                return perfil(request, "Se ha actualizado de manera exitosa la contraseña.")
+
             else:
+                login(request, user)
                 return render(request, 'login.html', {'mensaje': 'Debe iniciar sesión para ingresar.'})
         else:
-            return render(request, "perfil-vista-dueno.html", {'usuario':nombre,'rut':usuarioactual, 'mail':mail, 'mensaje': 'La contraseña ingresada es incorrecta o ambas contraseñas nuevas no coinciden'})
+            return perfil(request, 'La contraseña ingresada es incorrecta o ambas contraseñas nuevas no coinciden.')
+
     else:
         return render(request, 'login.html', {'mensaje': 'Debe iniciar sesión para ingresar.'})
 
